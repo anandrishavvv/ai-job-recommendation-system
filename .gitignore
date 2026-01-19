@@ -1,5 +1,6 @@
 __pycache__/
 uploads/
 models/job_model.pkl
+venv/
 .env
 *.pyc
