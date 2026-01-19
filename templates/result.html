@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>AI Job Finder</h2>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Your Extracted Skills</h2>
+        <div class="skills">
+            {% for skill in skills %}
+                <span class="skill">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h2 class="section-title">Recommended Jobs</h2>
+
+    {% for job in jobs %}
+        <div class="job-card">
+            <h3>{{ job.job_title }}</h3>
+
+            <p><b>Match Score:</b>
+                <span class="score">{{ job.match_score }}</span>
+            </p>
+
+            <p><b>Matched Skills:</b> {{ job.matched_skills }}</p>
+            <p><b>Skills to Learn:</b> {{ job.missing_skills }}</p>
+        </div>
+    {% endfor %}
+
+    <a class="back-btn" href="/">⬅ Upload Another Resume</a>
+
+</div>
+
+<footer>
+    <p>Built using Python, NLP & AI</p>
+</footer>
+
+</body>
+</html>

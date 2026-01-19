@@ -1,0 +1,6 @@
+job_id,job_title,required_skills
+1,Python Developer,"python,flask,django,sql"
+2,Data Analyst,"python,sql,data analysis,excel,power bi"
+3,Machine Learning Engineer,"python,machine learning,data analysis"
+4,Frontend Developer,"html,css,javascript,react"
+5,Backend Developer,"python,sql,flask,api"
